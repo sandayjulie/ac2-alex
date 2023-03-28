@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     AC 2 - Calculos de Frete
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="corpo" [fullscreen]="true">
+  <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-list-header class="h1">Escolha uma opção de entrega: </ion-list-header>
+
+    <ion-item>
+      <ion-label> Regular (entre 1 a 3 meses) </ion-label>
+      <ion-radio value="regular"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Expresso (entre 10 a 15 dias) </ion-label>
+      <ion-radio value="xpresso"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Agendado (data determinada) </ion-label>
+      <ion-radio value="agendado"></ion-radio>
+    </ion-item>
+
+  </ion-radio-group>
+
+  <ion-item>
+    <ion-label position="floating">Peso da sua mercadoria em kg:</ion-label>
+    <ion-input [(ngModel)]="kg" type="number" placeholder="Insira o nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+  <ion-label position="floating">Digite a distância em km:</ion-label>
+  <ion-input [(ngModel)]="km" type="number"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-button fill="outline" expand="block" color="secondary" (click)="btn()">Preço Final</ion-button>
+  </ion-list>
+
+</ion-content>
